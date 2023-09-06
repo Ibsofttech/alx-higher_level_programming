@@ -8,4 +8,4 @@ def fizzbuzz():
         elif val % 5 == 0:
             print(f"Buzz ", end='')
         else:
-            print(f"{dgt} ", end='')
+            print(f"{val} ", end='')
