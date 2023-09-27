@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""An empty class with name Square"""
+"""Define a class of square"""
 
 
 class Square:
-    """no attributes and methods"""
+    """square representation"""
     def __init__(self, size):
         self.__size = size
