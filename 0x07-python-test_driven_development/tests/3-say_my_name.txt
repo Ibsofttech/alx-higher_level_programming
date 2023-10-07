@@ -6,8 +6,8 @@ TEST FOR DIFFFERENT INPUT POSIBILTIES
 >>> say_my_name("Ibrahim", "Muibi")
 My name is Ibrahim Muibi
 
->>> say_my_name("IB")
-My name is IB
+>>> say_my_name("Ibrahim")
+My name is Ibrahim
 
 >>> say_my_name()
 Traceback (most recent call last):
