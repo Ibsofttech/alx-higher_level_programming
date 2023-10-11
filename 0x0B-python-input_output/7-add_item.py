@@ -10,6 +10,6 @@ try:
 except FileNotFoundError:
     args_list = []
 
-for args in sys.argv[1:]:
-    args_list.append(args)
+for arg in sys.argv[1:]:
+    args_list.append(arg)
 save_to_json_file(args_list, "add_item.json")
