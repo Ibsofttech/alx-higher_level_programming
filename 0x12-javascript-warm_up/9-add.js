@@ -8,3 +8,4 @@ function add (a, b) {
   
   const sum = add(num1, num2);
   console.log(`${sum}`);
+  
