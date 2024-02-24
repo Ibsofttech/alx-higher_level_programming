@@ -1,13 +1,20 @@
 #!/usr/bin/python3
-"""Start link class to table in database
-"""
-import sys
-from model_state import Base, State
+""" Using SQLAlchemy to access database from python """
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
 
-from sqlalchemy import (create_engine)
 
-if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(sys.argv[1], sys.argv[2], sys.argv[3]),
-                           pool_pre_ping=True)
-    Base.metadata.create_all(engine)
+Base = declarative_base()
+
+
+class State(Base):
+    """ Defines a clasa State that inherits from Base
+
+        __tablename__: container for the table name State
+        id: the state's id
+        name: the state's name'
+    """
+    __tablename__ = "states"
+    id = Column(Integer, autoincrement=True, nullable=False, primary_key=True)
+    name = Column(String(128), nullable=False)
+
