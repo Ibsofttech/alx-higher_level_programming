@@ -4,7 +4,7 @@ const rqst = require('request');
 const epi_Num = process.argv[2];
 const API_URL = 'https://swapi-api.hbtn.io/api/films/';
 
-rqst(API_URL + epi_Num, function (err, response, body) {
+request(API_URL + epi_Num, function (err, response, body) {
   if (err) {
     console.log(err);
   } else if (response.statusCode === 200) {
